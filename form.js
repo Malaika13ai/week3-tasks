@@ -46,7 +46,7 @@ email.addEventListener("input", () => {
 
 password.addEventListener("input", () => {
     if (password.value.length >= 6) {
-        passwordMessage.textContent = "";
+        passwordMessage.textContent = ""
     }
 });
 

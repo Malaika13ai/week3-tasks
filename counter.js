@@ -8,13 +8,13 @@ let counter = 0;
 
 increase.addEventListener('click',()=>{
     count.textContent = ++counter;
-})
+});
 
 decrease.addEventListener('click',()=>{
     count.textContent = --counter;
-})
+});
 
 reset.addEventListener('click',()=>{
     counter = 0;
     count.textContent = counter;
-})
+});
