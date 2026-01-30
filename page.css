@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 60px 20px 10px;
+    width: 100%;
+     background-color: rgba(0, 0, 0, 0.548);
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 100px;
+    list-style: none;
+    
+}
+
+ ul li a{
+text-decoration: none;
+color: beige;
+font-size: 20px;
+
+}
+
+.section-main{
+padding-top: 60px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap:20px
+}
+
+.section-main h1{
+  
+    color: #1931AB;
+    margin-top: 20px;
+}
+.section-main .description{
+ background-color: #685dce;
+ padding: 20px;
+ border-radius: 20px;
+ box-shadow: 2px 5px 3px gray;
+ color: white;
+ font-weight: 600;
+}
+
+
+footer{
+      padding: 20px 60px 20px 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.548);
+    color: white;
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+  
+align-items: stretch;   /* 🔥 important */
+    gap: 15px;
+    padding: 20px;
+    width: 400px;           /* control form width */
+    background: beige;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+    margin-top: 30px;
+
+}
+
+.main-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.main-form input,
+.main-form textarea,
+.main-form button {
+    width: 100%;
+    padding: 8px;
+}
+
+.main-form button {
+    background-color: #685dce;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.main-form button:hover {
+    background-color: #564bc7;
+}
+
+.main-form input[type="radio"],
+.main-form input[type="checkbox"] {
+    width: auto;
+}
+
+.gender{
+    display: flex;
+    gap: 20px;
+}
+.message{
+    color: red;
+    font-size: small;
+    margin-top: 4px;
+}

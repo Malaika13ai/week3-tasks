@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            
+            <ul>
+                <li><a href="page.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                <li><a href="#">Info</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <section class="section-main">
+      <h1>Welcome to Our Webpage</h1>
+    <p class="description">
+       The purpose of this page is to practice front-end development concepts
+        such as layout design, form handling, and basic styling.
+    </p>
+    <main>
+        <form class="main-form" id="my-form">
+            
+            <p class="content"> Please fill out the form below to create an account. Your personal details such as name, email address, and age help us personalize
+        your experience. Selecting your gender and accepting the terms and conditions
+        ensures that you understand and agree to our policies.</p>
+         <label>
+            Full Name
+          <input  type="text" id="full-name">
+          <P id="name-message" class="message"></P>
+          </label>
+          <label>
+            Email
+          <input  type="email" id="email">
+          <P id="email-message" class="message"></P>
+          </label>
+           <label>
+            password
+          <input  type="password" id="password">
+          <P id="password-message" class="message"></P>
+          </label>
+           <label>
+            Age
+          <input  type="number" id="age">
+          <P id="text" class="message"></P>
+          </label>
+          <div class="gender" id="gender">
+         <label>
+            
+          <input type="radio" name="gender" value="male"> 
+          Male
+          </label>
+
+            <label>
+            
+          <input type="radio" name="gender" value="male"> 
+            Female
+          </label>
+           </div>
+
+          <label>
+            Comments
+          <TextArea id="comments"></TextArea>
+          <p id="comment-message" class="message"></p>
+      </label>
+          
+
+      <label>
+        <input type="checkbox" id="terms-checkbox"> 
+        Accept terms and conditions
+        <p id="terms-message" class="message"></p>
+      </label>
+
+      <button type="submit">Submit</button>
+        </form>
+    </main>
+   </section>
+
+    <footer>
+      <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="page.js"></script>
+</body>
+</html>
