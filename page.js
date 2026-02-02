@@ -14,7 +14,7 @@ const nameMessage = document.getElementById("name-message");
 const genderRadios = document.querySelectorAll('input[name="gender"]');
 
 let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ ;
-
+let ageRegex = /[0-9]/;
 
 myForm.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -25,7 +25,11 @@ myForm.addEventListener('submit', (e)=>{
      text.textContent = "This field is required";
      hasError = true;
 
+    }else if(age.value < 0){
+         text.textContent = "Please enter a positive number";
+     hasError = true;
     }
+
     if(!fullName.value.trim()){
            nameMessage.textContent = "FullName is required";
      hasError = true;
@@ -60,7 +64,26 @@ myForm.addEventListener('submit', (e)=>{
      hasError = true;
     }
 
+
+
       if (!hasError) {
+
+        let formObj = {  
+
+            fullName: fullName.value,
+           email : email.value,
+           password : password.value,
+           age : age.value,
+           comments : comments.value,
+            gender: genderChecked.checked,
+            termsCheckbox : termsCheckbox.checked
+
+        }
+
+
+      localStorage.setItem("formObj", JSON.stringify(formObj));
+
+
         alert("Form submitted successfully!");
         myForm.reset(); 
     }
@@ -72,12 +95,11 @@ const fields = [
     { input: fullName, message: nameMessage, validator: val => val.trim() !== "" },
     { input: email, message: emailMessage, validator: val => emailRegex.test(val.trim()) },
     { input: password, message: passwordMessage, validator: val => val.length >= 6 },
-    { input: age, message: text, validator: val => val.trim() !== "" },
+    { input: age, message: text, validator: val => val > 0 },
     { input: comments, message: commentMessage, validator: val => val.trim() !== "" },
     { input: termsCheckbox, message: termsMessage, validator: el => el.checked }
 ];
 
-// Add event listener for all fields
 fields.forEach(field => {
     const eventType = field.input.type === "checkbox" ? "change" : "input";
 
